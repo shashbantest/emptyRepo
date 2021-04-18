@@ -11,3 +11,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         issue-message: 'Message that will be displayed on users first issue'
         pr-message: 'Message that will be displayed on users first pull request'
+    - name: Commit Comment
+      uses: peter-evans/commit-comment@v1.3.2
+      with:
+        body: 'this is a sinle line comment'
