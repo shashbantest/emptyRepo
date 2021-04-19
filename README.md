@@ -1,3 +1,3 @@
 # EmptyRepo
 
-Empty Repo for Actions run
+Empty Repo for Actions testing
