@@ -1,3 +1,3 @@
-# emptyRepo
+# EmptyRepo
 
 Empty Repo for Actions run
