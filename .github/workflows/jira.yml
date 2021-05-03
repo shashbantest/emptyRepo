@@ -33,4 +33,8 @@ jobs:
         with:
           issue: ${{ steps.find.outputs.issue }}
           comment: "${{ github.event.pusher.name }} pushed to repository: ${{ github.event.repository.full_name }}"
-
+      - name: add comment2
+        uses: atlassian/gajira-comment@v2.0.2
+        with:
+          issue: ${{ steps.find.outputs.issue }}
+          comment: "repository: ${{ github.event.repository.full_name }} <br> author: ${{ github.event.commits[0].author.name }} <br> commitsha : ${{ github.event.commits[0].id }} <br> commiturl: ${{ github.event.commits[0].url }} <br>commitmessage: ${{ github.event.commits[0].message }}"
