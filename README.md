@@ -1,3 +1,3 @@
 # EmptyRepo
 
-Empty Repo for Actions testing
+Empty Repo for Actions and JIRA testing
