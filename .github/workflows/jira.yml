@@ -32,7 +32,13 @@ jobs:
         uses: atlassian/gajira-comment@v2.0.2
         with:
           issue: ${{ steps.find.outputs.issue }}
-          comment: "${{ github.event.commits[0].author.name }} pushed commit: ${{ github.event.commits[0].id }} with url ${{ github.event.commits[0].url }} to repository: ${{ github.event.repository.full_name }}. commitmessage: ${{ github.event.commits[0].message }}"
+          comment: |
+            Commit made in GitHub for this issue
+            Author: ${{ github.event.commits[0].author.name }} 
+            repository: ${{ github.event.repository.full_name }}
+            commit: ${{ github.event.commits[0].id }} 
+            commiturl ${{ github.event.commits[0].url }}
+            commitmessage: ${{ github.event.commits[0].message }}
       - name: Commit Comment
         uses: peter-evans/commit-comment@v1.3.2
         with:
